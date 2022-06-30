@@ -1,0 +1,58 @@
+.progress {
+
+   &__item {
+      margin-bottom: 20px;
+   }
+
+   &__label {
+      font-size: 14px;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 15px;
+   }
+
+   &__bar {
+      display: flex;
+      width: 100%;
+      height: 10px;
+      border: 1px solid #ec776b;
+      padding: 2.5px;
+      border-radius: 3px;
+      cursor: pointer;
+   }
+
+   &__line {
+      background-color: $white;
+   }
+}
+.progress-line {
+   position: relative;
+   &__tooltips {
+      visibility: hidden;
+      opacity: 0;
+      font-family: "Roboto";
+      font-size: 11px;
+      position: absolute;
+      top: -30px;
+      right: 0;
+      transform: translateX(50%);
+      color: $white;
+      background-color: $bgcolor;
+      border-radius: 5px;
+      padding: 3px 5px;
+      &._show{
+         visibility: visible;
+         opacity: 1;
+      }
+      &::after{
+         content: "";
+         position: absolute;
+         border: 3px solid transparent;
+         border-top-color: $bgcolor;
+         bottom: -6px;
+         left: 50%;
+         transform: translateX(-50%);
+      }
+   }
+}
